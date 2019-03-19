@@ -1,16 +1,33 @@
+import './styles/reset.css'
+
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Router } from '@reach/router'
 
-function App() {
-  <div id="root" />
-  const rootElement = document.getElementById('root')
-  const element = React.createElement('div', {
-    className: 'container',
-    children: 'Hello!'
-  })
+import { forceRenderStyles } from 'typestyle'
 
-  ReactDOM.render(element, rootElement)
+import { Routes } from 'routes'
+
+import { Main } from 'commons/layouts'
+import { A } from 'views/a'
+import { B } from 'views/b'
+
+const App = (
+  <Router>
+    <Main path={Routes.index}>
+      <A path={Routes.index} />
+      <B path={Routes.b} />
+    </Main>
+  </Router>
+)
+
+// poi magic
+render(App, document.querySelector('#app'))
+
+// to prevent an unsightly flash on initial render
+forceRenderStyles()
+
+// hmr: only refresh the page if necessary
+if (module.hot) {
+  module.hot.accept()
 }
-
-// =====================
-export { App }
