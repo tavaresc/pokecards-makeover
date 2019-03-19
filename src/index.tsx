@@ -1,4 +1,5 @@
-import './styles/reset.css'
+import 'styles/css/reset.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 import * as React from 'react'
 import { render } from 'react-dom'

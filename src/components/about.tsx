@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import 'styles/css/freelancer.css'
+
 export function About() {
   return (
     <section className="success" id="about">

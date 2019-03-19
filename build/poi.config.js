@@ -54,6 +54,7 @@ module.exports = {
       components: computePath('../src/components/'),
       routes: computePath('../src/routes.ts'),
       styles: computePath('../src/styles/'),
+      static: computePath('../src/static/'),
       utils: computePath('../src/utils/'),
       views: computePath('../src/views/')
     })
