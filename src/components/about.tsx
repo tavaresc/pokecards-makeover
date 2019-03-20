@@ -1,10 +1,13 @@
 import * as React from 'react'
 
+import { star } from 'svg'
+
 import 'styles/css/freelancer.css'
 
 export function About() {
   return (
     <section className="success" id="about">
+      {star('#fff', 20)}
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">

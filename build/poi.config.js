@@ -56,7 +56,8 @@ module.exports = {
       styles: computePath('../src/styles/'),
       static: computePath('../src/static/'),
       utils: computePath('../src/utils/'),
-      views: computePath('../src/views/')
+      views: computePath('../src/views/'),
+      svg: computePath('../src/svg/'),
     })
 
     return config
